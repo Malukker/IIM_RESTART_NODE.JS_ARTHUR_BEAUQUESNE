@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Document</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<header>
+			<h1>Create your dream band</h1>
+			<p>Make your own band using names you'd like the best musicians to bear ! <br>
+				The best will be picked and published on the website for everyone to see.</p>
+		</header>
+		<div id="agents"></div>
+
+		<script>
+			// fetch data from api and display it
+			fetch('http://localhost:3000/agents')
+				.then((response) => response.json())
+				.then((data) => {
+					console.log(data)
+					let agents = document.querySelector("#agents")
+					data.forEach((agent) => {
+						agents.innerHTML += 
+						`
+						<a href="agent.html?id=${agent.id}"
+                    		<h2 class="tag">${agent.name}, ${agent.age}, ${agent.role}</h2>
+							
+						</a>
+						<p> </p>
+						<p> </p>
+                		`
+					})
+				})
+
+			
+		</script>
+
+		<p class="case">Type Name, then age, then role.</p>
+
+		<form class="sender">
+			<input type="text" name="member">
+			<input type="text" name="old">
+			<input type="text" name="job">
+			<button
+				type="button"
+				onclick="sendAgent()"
+			>
+				Send Member
+			</button>
+		</form>
+	</body>
+
+	<script src="index.js"></script>
+</html>

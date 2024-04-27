@@ -1,0 +1,178 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+	font-family: Adler;
+	src : url(adler.ttf);
+}
+
+html {
+    background-color: #121212
+}
+
+h1{
+    font-family: Adler;
+    text-align : center;
+    font-size: 40px;
+}
+
+h2{
+    font-family: Adler;
+    text-align : center;
+}
+
+h3, p{
+    color : white;
+    font-family: 'Courier New', monospace;
+}
+
+a {
+    color : white;
+    font-family: Adler;
+    font-style: italic;
+    font-size: large;
+    text-align: center;
+}
+
+a:hover {
+    color : lightseagreen;  
+}
+
+header {
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.higher_zone > article {
+    margin : 20px 500px;
+}
+
+.higher_zone > div {
+    margin : 20px 30px;
+    background-color: #212121;
+}
+
+.big_zone {
+    display : flex;
+    align-items: stretch;
+    flex-wrap: nowrap;
+}
+
+
+@media screen and (max-width: 800px) {
+    .big_zone {
+        display : flex;
+        align-items: stretch;
+        flex-wrap: wrap;
+    }
+}
+
+.big_zone > aside {
+    background-color: #212121;
+    margin : 10px;
+    padding : 20px;
+}
+
+.big_zone > article > p {
+    text-align: justify;
+    margin : 10px;  
+    margin-bottom: auto;
+    padding : 5px 20px;
+    background-color: #313131;
+}
+
+.big_zone > article > section {
+    margin : 10px;
+    padding : 10px;
+    background-color: #DECDBB;
+    color : black
+} 
+
+.big_zone > div > img {
+    margin : 10px;
+}
+
+.case {
+    margin: 5px;
+    padding: 10px;
+    background-color: #121212;
+    text-align: justify;
+}
+
+.bottom {
+    margin : 10px;
+    margin-top: 40px;
+    padding: 10px;
+    background-color: #1A1A1A;
+}
+
+.bottom > article {
+    display: flex;
+    justify-content: center;
+}
+
+.line_display {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin : 10px 100px;
+    padding: 10px;
+    padding-left: 40px;
+    background-color: #212121;
+}
+
+@media screen and (max-width: 800px) {
+    .line_display {
+        flex-wrap: wrap;
+    }
+}
+
+.space {
+    width: 60%;
+    margin: 30px;
+}
+
+.album_display {
+    display : flex;
+    margin: 10px 200px;
+    padding: 10px;
+    align-items: start;
+    background-color: #1A1A1A;
+    gap: 100px;
+}
+
+@media screen and (max-width: 800px) {
+    .album_display {
+        flex-wrap: wrap;
+    }
+}
+
+.tag {
+    margin: 10px;
+    padding: 10px;
+    background-color: #212121;
+}
+
+#agents {
+    display: flex;
+    flex-direction: column;
+}
+
+.sender {
+    margin : 10px;
+    padding : 10px;
+    background-color: #DECDBB;
+    color : black;
+    display: flex;
+    justify-content:center;
+    size: 30% 30%;
+}
+
+#agent {
+    color: white;
+}
